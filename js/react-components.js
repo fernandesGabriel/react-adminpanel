@@ -60,7 +60,7 @@ class ProfileNavigation extends React.Component {
 	            <li className="dropdown">
 	                <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	                    <img src={this.props.image} /> 
-	                    <span className="caret"></span>
+	                    <i className="fa fa-caret-down"></i>
 	                </a>
 	                <ul className="dropdown-menu">
 	                    <li><a href="#">Profile</a></li>
@@ -137,7 +137,7 @@ class IntroContentItem extends React.Component {
 	render() {
 	    return (
 			<div className="col-xs-6 col-sm-4 col-md-2">
-	            <div className="panel panel-default {this.props.class}">
+	            <div className={"panel panel-default " + this.props.class}>
 	                <div className="panel-body">
 	                    <h4>{this.props.value}</h4>
 	                    <span className="text-muted">{this.props.label}</span>
@@ -169,7 +169,7 @@ class ContentToolbar extends React.Component {
 class ContentToolbarSearch extends React.Component {
 	render() {
 	    return (
-            <div className="btn-group">
+            <div className="btn-group search-tool">
                 <button type="button" className="btn btn-default"><i className="fa fa-search" aria-hidden="true"></i></button>
                 <button type="button" className="btn btn-default"><i className="fa fa-filter" aria-hidden="true"></i></button>
             </div>
@@ -180,8 +180,8 @@ class ContentToolbarSearch extends React.Component {
 class ContentToolbarBulk extends React.Component {
 	render() {
 	    return (
-            <div className="btn-group">
-                <button type="button" className="btn btn-default"><input type="checkbox" /><span className="caret"></span></button>
+            <div className="btn-group bulk-tool">
+                <button type="button" className="btn btn-default"><input type="checkbox" /><i className="fa fa-caret-down"></i></button>
             </div>
 	 	);
 	}
@@ -190,7 +190,7 @@ class ContentToolbarBulk extends React.Component {
 class ContentToolbarActions extends React.Component {
 	render() {
 	    return (
-            <div className="btn-group">
+            <div className="btn-group action-tool">
                 <button type="button" className="btn btn-default"><i className="fa fa-pencil" aria-hidden="true"></i></button>
                 <button type="button" className="btn btn-default"><i className="fa fa-envelope" aria-hidden="true"></i></button>
                 <button type="button" className="btn btn-default"><i className="fa fa-trash" aria-hidden="true"></i></button>
@@ -202,9 +202,9 @@ class ContentToolbarActions extends React.Component {
 class ContentToolbarMore extends React.Component {
 	render() {
 	    return (
-			<div className="btn-group" role="group">
+			<div className="btn-group more-tool" role="group">
 			    <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			        More <span className="caret"></span>
+			        More <i className="fa fa-caret-down"></i>
 			    </button>
 			    <ul className="dropdown-menu">
 			        <li><a href="#">Login as Client</a></li>
